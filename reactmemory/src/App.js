@@ -16,6 +16,8 @@ class App extends Component {
     message: "Click one to start!",
     highscore: 0
   };
+  
+
 
   shuffle = (array) => {
     for (let i= array.length -1; i > 0; i--) {
@@ -64,14 +66,14 @@ class App extends Component {
      <Nav score={this.state.count} message={this.state.message} highscore={this.state.highscore}/>
      <Jumbotron/>
      <Wrapper>
-     {this.state.cards.map(card=>{
+     {this.state.cards.map(card=>(
        <Card
        game={this.playGame}
        key={card.name}
        name={card.name}
        image={card.image}
        />
-     })}
+     ))}
      </Wrapper>
      <Footer />
      </div>
